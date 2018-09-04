@@ -1,0 +1,59 @@
+$basefont: 'Roboto', sans-serif;
+$dkgrey: #1d1d1d;
+$mdgrey: #5d5e5d;
+$blue: #005695;
+$red: #D60D0D;
+
+@mixin title-styles($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+    font-family: $basefont;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $blue;
+}
+@mixin paragraph-styles($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+    font-family: $basefont;
+    font-weight: 400;
+    color: $dkgrey;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.8rem;
+}
+h1 {
+    @include title-styles(28);
+    color: $mdgrey;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    margin: 0;
+}
+h2 {
+    @include title-styles(25);
+    padding: 0 10px;
+}
+h4 {
+    @include title-styles(20);
+    text-transform: uppercase;
+    color: $mdgrey;
+}
+p,
+label {
+    @include paragraph-styles(18);
+    padding: 5px 0;
+    margin: 0;
+    color: $dkgrey;
+}
+// button {
+//     @include title-styles(25);
+//     text-transform: uppercase;
+// }
+footer span {
+    font-size: 12px;
+    color: lightgrey;
+    padding: 20px 0;
+}

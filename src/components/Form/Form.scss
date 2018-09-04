@@ -1,0 +1,150 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+$basefont: 'Roboto', sans-serif;
+$dkgrey: #1d1d1d;
+$mdgrey: #5d5e5d;
+$blue: #005695;
+$red: #D60D0D;
+
+@mixin title-styles($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+    font-family: $basefont;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $blue;
+}
+@mixin paragraph-styles($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+    font-family: $basefont;
+    font-weight: 400;
+    color: $dkgrey;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.8rem;
+}
+h1 {
+    @include title-styles(28);
+    color: $mdgrey;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    margin: 0;
+}
+h2 {
+    @include title-styles(25);
+    padding: 0 10px;
+}
+h4 {
+    @include title-styles(20);
+    text-transform: uppercase;
+    color: $mdgrey;
+}
+p,
+label {
+    @include paragraph-styles(18);
+    padding: 5px 0;
+    margin: 0;
+    color: $dkgrey;
+}
+// ---------------------------
+.hidden {
+    display: none;
+}
+
+.form-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    form {
+        background-color: white;
+        text-align: left;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .question {
+            padding: 20px 0;
+            border-bottom: 1px solid $blue;
+            width: 100%;
+        }
+        // .question.one, .question.submit {
+        //     width: 100%;
+        // }
+        // .question.two, .question.three,
+        // .question.four, .question.five {
+        //     width: 50%;
+        // }
+        span {
+            color: $red;
+            font-weight: 700;    
+        }
+        #who1, #who2, #who3 {
+            width: 30px;
+            height: 30px;
+            margin: 0 20px 0 5px;
+            text-align: center;
+            color: $red;
+            font-weight: 700;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        #when, #where {
+            margin-left: 5px;
+            text-align: center;
+            color: $mdgrey;
+            padding: 5px 10px;
+        }
+        #when {
+            text-transform: uppercase;
+        }
+        textarea {
+            width: auto;
+            height: auto;
+        }
+        .submit {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            button {
+                padding: 20px 50px;
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                &:hover {
+                    background-color: lightgray;
+                    color: $mdgrey;
+                    border: 1px solid $mdgrey;
+                }
+            }
+        }
+    }
+}
+// ------------RESPONSIVENESS---------------
+@media (max-width: 670px) {
+    form {
+        .question.two, .question.three,
+        .question.four, .question.five {
+            width: 100%;
+        }
+    }
+}
