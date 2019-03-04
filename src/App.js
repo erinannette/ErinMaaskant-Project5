@@ -93,7 +93,7 @@ class App extends Component {
         </header>
         <section className="page-title">
           <div>
-            <h1>Record Your Cycling Incident</h1>
+            <h1>CycleWatch</h1>
           </div>
         </section>
           <Form addFormToDatabase={this.addFormToDatabase} showForm={this.state.showForm} setShowForm={this.setShowForm} />

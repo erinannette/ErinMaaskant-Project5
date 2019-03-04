@@ -1,4 +1,6 @@
-$basefont: 'Roboto', sans-serif;
+$basefont: 'Comfortaa', sans-serif;
+$paragraph: 'Catamaran', sans-serif;
+
 $dkgrey: #1d1d1d;
 $mdgrey: #5d5e5d;
 $blue: #005695;
@@ -8,15 +10,13 @@ $red: #D60D0D;
     font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;
     font-family: $basefont;
-    font-weight: 700;
     letter-spacing: 1px;
     color: $blue;
 }
 @mixin paragraph-styles($sizeValue) {
     font-size: $sizeValue * 1px;
     font-size: ($sizeValue/10) * 1rem;
-    font-family: $basefont;
-    font-weight: 400;
+    font-family: $paragraph;
     color: $dkgrey;
 }
 html {

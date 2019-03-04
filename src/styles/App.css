@@ -153,8 +153,7 @@ body {
 h1 {
   font-size: 28px;
   font-size: 2.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
   letter-spacing: 1px;
   color: #005695;
   color: #5d5e5d;
@@ -165,8 +164,7 @@ h1 {
 h2 {
   font-size: 25px;
   font-size: 2.5rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
   letter-spacing: 1px;
   color: #005695;
   padding: 0 10px; }
@@ -174,8 +172,7 @@ h2 {
 h4 {
   font-size: 20px;
   font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
   letter-spacing: 1px;
   color: #005695;
   text-transform: uppercase;
@@ -185,8 +182,7 @@ p,
 label {
   font-size: 18px;
   font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: "Catamaran", sans-serif;
   color: #1d1d1d;
   padding: 5px 0;
   margin: 0;
@@ -199,17 +195,19 @@ footer span {
 
 .App {
   text-align: center;
-  max-width: 1700px; }
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid grey; }
 
 .hidden {
   display: none; }
 
 header {
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   background-image: url("../assets/header.jpg");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center-right;
   background-size: cover; }
 
 .hero-logo img {
